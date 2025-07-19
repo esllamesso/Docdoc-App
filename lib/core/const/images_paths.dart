@@ -3,4 +3,5 @@ class ImagesPaths{
   static final docdocLogo = 'assets/images/docdoc.svg';
   static final back2x = 'assets/images/back2x.png';
   static final doctor = 'assets/images/doctor.png';
+  static final notification = "assets/logos/Button.svg";
 }
