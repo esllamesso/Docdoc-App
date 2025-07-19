@@ -1,4 +1,6 @@
 import 'package:docdoc/core/const/images_paths.dart';
+import 'package:docdoc/core/utils/page_transition.dart';
+import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/screens/registration_screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,7 +17,7 @@ class StartedScreen extends StatelessWidget {
       body: Stack(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(
+           padding: EdgeInsets.symmetric(
               horizontal: size.width * 0.3,
               vertical: size.height * 0.07,
             ),
@@ -24,17 +26,17 @@ class StartedScreen extends StatelessWidget {
 
           Positioned(
             top: size.height * 0.12,
-            left: 0,
-            right: 0,
+           left: 0,
+           right: 0,
             child: Image.asset(
               'assets/images/back2x.png',
-              height: size.height * 0.6,
-              fit: BoxFit.contain,
+             height: size.height * 0.6,
+            fit: BoxFit.contain,
             ),
           ),
 
           Positioned(
-            top: size.height * 0.2,
+         top: size.height * 0.2,
             left: 0,
             right: 0,
             child: Image.asset(
@@ -46,7 +48,7 @@ class StartedScreen extends StatelessWidget {
 
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(
+    child: Container(
               height: size.height * 0.5,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -84,7 +86,7 @@ class StartedScreen extends StatelessWidget {
                 Center(
                   child: Text(
                     textAlign: TextAlign.center,
-                    'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
+                    Txt.doctorTxt,
                     style: TextStyle(
                       fontSize: size.width * 0.027,
                       color: Colors.black,
@@ -99,7 +101,7 @@ class StartedScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInScreen()),
+                        createFadeSlideRoute(SignInScreen()),
                       );
                     },
                     child: Container(
@@ -107,7 +109,7 @@ class StartedScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(16),
-                      ),
+                     ),
                       child: Center(
                         child: Text(
                           "Get Started",
@@ -115,15 +117,16 @@ class StartedScreen extends StatelessWidget {
                             color: Colors.white,
                             fontSize: size.width * 0.045,
                             fontWeight: FontWeight.w600,
-                          ),
+                         ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ],
+             ],
             ),
           ),
+
         ],
       ),
     );

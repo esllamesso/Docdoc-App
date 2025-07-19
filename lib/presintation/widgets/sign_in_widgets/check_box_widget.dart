@@ -1,3 +1,4 @@
+import 'package:docdoc/presintation/screens/registration_screens/forgot_pss_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/colors.dart';
 
@@ -43,7 +44,9 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPssScreen()));
+          },
           child: Text(
             "Forgot Password?",
             style: TextStyle(

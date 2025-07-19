@@ -1,5 +1,7 @@
 import 'package:docdoc/core/utils/colors.dart';
 import 'package:docdoc/core/utils/txt.dart';
+import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
+import 'package:docdoc/presintation/screens/registration_screens/sign_up_screen.dart';
 import 'package:docdoc/presintation/widgets/sign_in_widgets/divider_widget.dart';
 import 'package:docdoc/presintation/widgets/sign_in_widgets/sign_in_options_widget.dart';
 import 'package:docdoc/presintation/widgets/sign_in_widgets/text_form_field_widget.dart';
@@ -85,7 +87,12 @@ class _SignInScreenState extends State<SignInScreen> {
               height: size.height * 0.065,
               width: double.infinity,
               child: InkWell(
-                onTap: (){},
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => HomeScreen()),
+                  );
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
@@ -126,7 +133,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 InkWell(
                   highlightColor: Colors.transparent,
                   splashColor: Colors.transparent,
-                  onTap: (){},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => SignUpScreen()),
+                    );
+                  },
                   child: Text(
                     "Sign Up",
                     style: TextStyle(
