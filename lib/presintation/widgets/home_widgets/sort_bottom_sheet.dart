@@ -24,7 +24,9 @@ class _SortBottomSheetState extends State<SortBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery
+        .of(context)
+        .size;
 
     return DraggableScrollableSheet(
       initialChildSize: 0.5,
@@ -51,11 +53,23 @@ class _SortBottomSheetState extends State<SortBottomSheet> {
                   ),
                 ),
               ),
-              const Text(
+              Center(
+                child: Text("Sore By", style: TextStyle(fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: ColorsManager.black)),
+              ),
+              SizedBox(height: size.height * 0.02),
+              Expanded(child: Divider(
+                thickness: 1,
+                color: ColorsManager.grey3,
+              )),
+              SizedBox(height: size.height * 0.03),
+
+              Text(
                 "Specialty",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: size.height * 0.04),
               SizedBox(
                 height: 41,
                 child: ListView.separated(
@@ -90,13 +104,13 @@ class _SortBottomSheetState extends State<SortBottomSheet> {
                   },
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: size.height * 0.05),
 
               const Text(
                 "Rating",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: size.height * 0.04),
               SizedBox(
                 height: 40,
                 child: ListView.separated(
@@ -145,10 +159,10 @@ class _SortBottomSheetState extends State<SortBottomSheet> {
                 ),
               ),
 
-              SizedBox(height: size.height * 0.130),
+              SizedBox(height: size.height * 0.100),
 
               InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   width: double.infinity,
                   height: 52,
