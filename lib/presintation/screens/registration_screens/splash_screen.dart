@@ -1,6 +1,5 @@
 import 'package:docdoc/core/const/images_paths.dart';
 import 'package:docdoc/core/utils/page_transition.dart';
-import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
 import 'package:docdoc/presintation/screens/registration_screens/started_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';

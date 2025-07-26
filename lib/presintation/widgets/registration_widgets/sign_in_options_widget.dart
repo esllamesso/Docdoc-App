@@ -1,4 +1,3 @@
-import 'package:docdoc/core/const/images_paths.dart';
 import 'package:docdoc/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

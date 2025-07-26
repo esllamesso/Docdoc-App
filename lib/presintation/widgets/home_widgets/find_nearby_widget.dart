@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/utils/colors.dart';
+import '../../../core/utils/colors.dart';
 
 class FindNearbyWidget extends StatefulWidget {
   const FindNearbyWidget({super.key});

@@ -3,13 +3,30 @@ import 'package:flutter/material.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   final int currentIndex;
-  final Function(int) onTap;
 
   const CustomBottomNavBar({
     super.key,
     required this.currentIndex,
-    required this.onTap,
   });
+
+  void _handleNavigation(BuildContext context, int index) {
+    if (index == currentIndex) return;
+
+    switch (index) {
+      case 0:
+        Navigator.pushReplacementNamed(context, '/home');
+        break;
+      case 1:
+        Navigator.pushReplacementNamed(context, '/chat');
+        break;
+      case 2:
+        Navigator.pushReplacementNamed(context, '/calendar');
+        break;
+      case 3:
+        Navigator.pushReplacementNamed(context, '/profile');
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +44,11 @@ class CustomBottomNavBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildIcon("assets/icons/home.png", 0),
-                _buildIcon("assets/icons/chat.png", 1, hasNotification: true),
+                _buildIcon(context, "assets/icons/home.png", 0),
+                _buildIcon(context, "assets/icons/chat.png", 1, hasNotification: true),
                 const SizedBox(width: 48),
-                _buildIcon("assets/icons/calender.png", 2),
-                _buildIcon("assets/icons/profilebott.png", 3),
+                _buildIcon(context, "assets/icons/calender.png", 2),
+                _buildIcon(context, "assets/images/pic.png", 3),
               ],
             ),
           ),
@@ -56,7 +73,9 @@ class CustomBottomNavBar extends StatelessWidget {
                 ],
               ),
               child: RawMaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/search');
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -74,11 +93,11 @@ class CustomBottomNavBar extends StatelessWidget {
     );
   }
 
-  Widget _buildIcon(String assetPath, int index, {bool hasNotification = false}) {
+  Widget _buildIcon(BuildContext context, String assetPath, int index, {bool hasNotification = false}) {
     final bool isSelected = currentIndex == index;
 
     return GestureDetector(
-      onTap: () => onTap(index),
+      onTap: () => _handleNavigation(context, index),
       child: Stack(
         alignment: Alignment.center,
         children: [

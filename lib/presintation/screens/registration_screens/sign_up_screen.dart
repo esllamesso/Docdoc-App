@@ -2,12 +2,12 @@ import 'package:docdoc/presintation/screens/registration_screens/face_id_screen.
 import 'package:flutter/material.dart';
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';
-import '../../widgets/sign_in_widgets/check_box_widget.dart';
-import '../../widgets/sign_in_widgets/divider_widget.dart';
-import '../../widgets/sign_in_widgets/sign_in_options_widget.dart';
-import '../../widgets/sign_in_widgets/text_form_field_widget.dart';
-import '../../widgets/sign_in_widgets/text_span_widget.dart';
-import '../../widgets/phone_num_field_widget.dart';
+import '../../widgets/registration_widgets/check_box_widget.dart';
+import '../../widgets/registration_widgets/divider_widget.dart';
+import '../../widgets/registration_widgets/sign_in_options_widget.dart';
+import '../../widgets/registration_widgets/text_form_field_widget.dart';
+import '../../widgets/registration_widgets/text_span_widget.dart';
+import '../../widgets/registration_widgets/phone_num_field_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

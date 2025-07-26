@@ -2,13 +2,12 @@ import 'package:docdoc/core/utils/colors.dart';
 import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
 import 'package:docdoc/presintation/screens/registration_screens/sign_up_screen.dart';
-import 'package:docdoc/presintation/widgets/sign_in_widgets/divider_widget.dart';
-import 'package:docdoc/presintation/widgets/sign_in_widgets/sign_in_options_widget.dart';
-import 'package:docdoc/presintation/widgets/sign_in_widgets/text_form_field_widget.dart';
-import 'package:docdoc/presintation/widgets/sign_in_widgets/text_span_widget.dart';
 import 'package:flutter/material.dart';
-
-import '../../widgets/sign_in_widgets/check_box_widget.dart';
+import '../../widgets/registration_widgets/check_box_widget.dart';
+import '../../widgets/registration_widgets/divider_widget.dart';
+import '../../widgets/registration_widgets/sign_in_options_widget.dart';
+import '../../widgets/registration_widgets/text_form_field_widget.dart';
+import '../../widgets/registration_widgets/text_span_widget.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

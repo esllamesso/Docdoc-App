@@ -5,4 +5,6 @@ class Txt {
   static String faceIdTxt = "Add a Face ID to make your account more secure and easy to sign in.";
   static String profileTxt = "Please take a few minutes to fill out your profile with as much detail as possible.";
   static String doctorTxt = 'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.';
+  static String notifyTxt = 'Notifications';
+  static String perInfoTxt = 'When you set up your personal information settings, you should take care to provide accurate information.';
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';
-import '../../widgets/sign_in_widgets/text_form_field_widget.dart';
+import '../../widgets/registration_widgets/text_form_field_widget.dart';
 
 class ForgotPssScreen extends StatefulWidget {
   const ForgotPssScreen({super.key});

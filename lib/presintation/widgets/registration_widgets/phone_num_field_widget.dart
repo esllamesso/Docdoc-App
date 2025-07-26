@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../../core/utils/colors.dart';
+import '../../../core/utils/colors.dart';
 
 class PhoneNumFieldWidget extends StatefulWidget {
   const PhoneNumFieldWidget({super.key});

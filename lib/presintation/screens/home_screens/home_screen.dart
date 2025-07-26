@@ -1,14 +1,14 @@
-import 'package:docdoc/core/const/images_paths.dart';
 import 'package:docdoc/core/utils/colors.dart';
+import 'package:docdoc/presintation/screens/home_screens/rec_doctor_screen.dart';
 import 'package:docdoc/presintation/widgets/custom_bottom_nav_bar.dart';
-import 'package:docdoc/presintation/widgets/find_nearby_widget.dart';
-import 'package:docdoc/presintation/widgets/home_top_widget.dart';
-import 'package:docdoc/presintation/widgets/rec_doctors_widget.dart';
-import 'package:docdoc/presintation/widgets/speciality_widget.dart';
+import 'package:docdoc/presintation/widgets/home_widgets/find_nearby_widget.dart';
+import 'package:docdoc/presintation/widgets/home_widgets/home_top_widget.dart';
+import 'package:docdoc/presintation/widgets/home_widgets/rec_doctors_widget.dart';
+import 'package:docdoc/presintation/widgets/home_widgets/speciality_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,7 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: ColorsManager.white,
       bottomNavigationBar: CustomBottomNavBar(
         currentIndex: selectedIndex,
-        onTap: onTap,
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(
@@ -88,7 +87,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> RecDoctorScreen()));
+                    },
                     child: Text(
                       "See All",
                       style: TextStyle(
