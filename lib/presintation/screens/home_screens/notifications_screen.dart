@@ -50,8 +50,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                   child: Text(
                     "${notifications.where((n) => !n.isRead).length} New",
                     style: TextStyle(
-                      fontSize: 8,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w400,
                       color: ColorsManager.white,
                     ),
                   ),
