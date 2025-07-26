@@ -23,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      bottomNavigationBar: CustomBottomNavBar(currentIndex: selectedIndex),
+      bottomNavigationBar: CustomBottomNavBar(currentIndex: 3),
       backgroundColor: ColorsManager.blue,
       body: Column(
         children: [

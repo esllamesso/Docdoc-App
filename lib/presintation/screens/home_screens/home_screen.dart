@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: ColorsManager.white,
       bottomNavigationBar: CustomBottomNavBar(
-        currentIndex: selectedIndex,
+        currentIndex: 0,
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(
