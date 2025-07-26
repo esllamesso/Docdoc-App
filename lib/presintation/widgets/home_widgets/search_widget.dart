@@ -1,3 +1,4 @@
+import 'package:docdoc/presintation/widgets/home_widgets/sort_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/utils/colors.dart';
@@ -58,7 +59,14 @@ class _SearchWidgetState extends State<SearchWidget> {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
+              builder: (_) => const SortBottomSheet(),
+            );
+          },
           icon:  SvgPicture.asset("assets/icons/sort.svg"),
         ),
       ],
