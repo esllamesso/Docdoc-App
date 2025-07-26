@@ -17,24 +17,35 @@ class _RecDoctorScreenState extends State<RecDoctorScreen> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ColorsManager.white,
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(
-          size.width * 0.04,
-          size.height * 0.08,
-          size.width * 0.04,
-          size.height * 0.04,
-        ),
-        child: SingleChildScrollView(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(
+            size.width * 0.04,
+            size.height * 0.03,
+            size.width * 0.04,
+            size.height * 0.04,
+          ),
           child: Column(
             children: [
               TopBar(
                 text: "Recommendation Doctor",
-                trailing: IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz_outlined)),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.more_horiz_outlined),
+                ),
               ),
               SizedBox(height: size.height * 0.02),
-              SearchWidget(),
-              SizedBox(height: size.height * 0.02),
-              RecDoctorsWidget(),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                      children: [
+                        SearchWidget(),
+                        SizedBox(height: size.height * 0.02),
+                        RecDoctorsWidget(),
+                      ]),
+                ),
+              ),
+
             ],
           ),
         ),
