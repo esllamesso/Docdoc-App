@@ -1,5 +1,4 @@
 import 'package:docdoc/core/const/images_paths.dart';
-import 'package:docdoc/core/utils/page_transition.dart';
 import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/screens/registration_screens/sign_in_screen.dart';
 import 'package:docdoc/presintation/widgets/button_widget.dart';

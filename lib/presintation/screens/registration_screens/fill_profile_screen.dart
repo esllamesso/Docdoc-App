@@ -13,7 +13,6 @@ class FillProfileScreen extends StatefulWidget {
 }
 
 class _FillProfileScreenState extends State<FillProfileScreen> {
-  @override
   final TextEditingController emailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController birthdayController = TextEditingController();

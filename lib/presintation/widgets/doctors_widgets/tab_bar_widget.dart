@@ -14,7 +14,6 @@ class TabBarWidget extends StatefulWidget {
 class _TabBarWidgetState extends State<TabBarWidget> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Column(
       children: [

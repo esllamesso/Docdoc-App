@@ -26,10 +26,12 @@ class NotificationItem extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
+                  // ignore: deprecated_member_use
                   color: notification.iconColor.withOpacity(0.15),
                 ),
                 child: SvgPicture.asset(
                   notification.iconPath,
+                  // ignore: deprecated_member_use
                   color: notification.iconColor,
                 ),
               ),

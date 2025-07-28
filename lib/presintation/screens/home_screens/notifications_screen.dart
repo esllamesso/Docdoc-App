@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_to_list_in_spreads
+
 import 'package:docdoc/core/utils/colors.dart';
 import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';

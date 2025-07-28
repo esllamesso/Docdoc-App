@@ -1,6 +1,7 @@
 import 'package:docdoc/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class TextFormFieldWidget extends StatefulWidget {
   String hintText;
   TextEditingController controller;

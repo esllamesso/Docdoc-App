@@ -51,7 +51,6 @@ class _PhoneNumFieldWidgetState extends State<PhoneNumFieldWidget> {
 
       onChanged: (phone){
         setState(() {
-          print(phone.completeNumber);
         });
       },
     );

@@ -20,6 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
         context,
         createFadeSlideRoute(StartedScreen()),
       );
