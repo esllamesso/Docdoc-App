@@ -1,13 +1,11 @@
+import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:docdoc/presintation/widgets/profile_widgets/profile_pic.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
-
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';
-import '../../widgets/registration_widgets/check_box_widget.dart';
 import '../../widgets/registration_widgets/phone_num_field_widget.dart';
 import '../../widgets/registration_widgets/text_form_field_widget.dart';
-import '../../widgets/registration_widgets/text_span_widget.dart';
 
 class PersonalInfo extends StatefulWidget {
   const PersonalInfo({super.key});
@@ -86,29 +84,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
             ),
             Spacer(),
 
-            SizedBox(
-              height: size.height * 0.065,
-              width: double.infinity,
-              child: InkWell(
-                onTap: () {},
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: ColorsManager.blue,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Save",
-                      style: TextStyle(
-                        fontSize: size.width * 0.045,
-                        fontWeight: FontWeight.w600,
-                        color: ColorsManager.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            ButtonWidget(text: "Save", onTap: (){},),
+
           ],
         ),
       ),

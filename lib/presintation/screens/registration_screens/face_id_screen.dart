@@ -1,4 +1,5 @@
 import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
+import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/utils/colors.dart';
@@ -43,34 +44,9 @@ class FaceIdScreen extends StatelessWidget {
             SizedBox(height: size.height * 0.120),
             Center(child: SvgPicture.asset("assets/images/faceID.svg")),
             const Spacer(),
-            SizedBox(
-              height: size.height * 0.065,
-              width: double.infinity,
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => HomeScreen()),
-                  );
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: ColorsManager.blue,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Submit",
-                      style: TextStyle(
-                        fontSize: size.width * 0.045,
-                        fontWeight: FontWeight.w600,
-                        color: ColorsManager.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            ButtonWidget(text: "Submit", onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> HomeScreen()));
+            },)
           ],
         ),
       ),

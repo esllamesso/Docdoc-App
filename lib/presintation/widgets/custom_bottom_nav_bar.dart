@@ -46,7 +46,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 _buildIcon(context, "assets/icons/home.png", 0),
                 _buildIcon(context, "assets/icons/chat.png", 1, hasNotification: true),
                 const SizedBox(width: 48),
-                _buildIcon(context, "assets/icons/calendar-2.svg", 2),
+                _buildIcon(context, "assets/icons/calender.png", 2),
                 _buildIcon(context, "assets/images/pic.png", 3),
               ],
             ),

@@ -1,4 +1,4 @@
-import 'package:docdoc/presintation/widgets/profile_pic_widget.dart';
+import 'package:docdoc/presintation/widgets/profile_widgets/profile_pic_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';

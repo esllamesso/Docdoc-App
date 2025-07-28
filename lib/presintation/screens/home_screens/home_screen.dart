@@ -3,7 +3,7 @@ import 'package:docdoc/presintation/screens/home_screens/rec_doctor_screen.dart'
 import 'package:docdoc/presintation/widgets/custom_bottom_nav_bar.dart';
 import 'package:docdoc/presintation/widgets/home_widgets/find_nearby_widget.dart';
 import 'package:docdoc/presintation/widgets/home_widgets/home_top_widget.dart';
-import 'package:docdoc/presintation/widgets/home_widgets/rec_doctors_widget.dart';
+import 'package:docdoc/presintation/widgets/doctors_widgets/rec_doctors_widget.dart';
 import 'package:docdoc/presintation/widgets/home_widgets/speciality_widget.dart';
 import 'package:flutter/material.dart';
 

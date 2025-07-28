@@ -3,7 +3,7 @@ import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 import '../../../data/notifications_model.dart';
-import '../../widgets/notification_item.dart';
+import '../../widgets/home_widgets/notification_item.dart';
 
 class NotificationsScreen extends StatefulWidget {
   final List<NotificationsModel> notifications;

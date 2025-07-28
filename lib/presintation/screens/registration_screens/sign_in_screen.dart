@@ -2,6 +2,7 @@ import 'package:docdoc/core/utils/colors.dart';
 import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
 import 'package:docdoc/presintation/screens/registration_screens/sign_up_screen.dart';
+import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/registration_widgets/check_box_widget.dart';
 import '../../widgets/registration_widgets/divider_widget.dart';
@@ -82,34 +83,9 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(height: size.height * 0.03),
             CheckBoxWidget(),
             SizedBox(height: size.height * 0.04),
-            SizedBox(
-              height: size.height * 0.065,
-              width: double.infinity,
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => HomeScreen()),
-                  );
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: ColorsManager.blue,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        fontSize: size.width * 0.045,
-                        fontWeight: FontWeight.w600,
-                        color: ColorsManager.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            ButtonWidget(text: "Login", onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> HomeScreen()));
+            },),
             SizedBox(height: size.height * 0.06),
             DividerWidget(),
             SizedBox(height: size.height * 0.04),

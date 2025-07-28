@@ -1,4 +1,5 @@
 import 'package:docdoc/presintation/screens/registration_screens/face_id_screen.dart';
+import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';
@@ -84,34 +85,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: size.height * 0.03),
               CheckBoxWidget(),
               SizedBox(height: size.height * 0.04),
-              SizedBox(
-                height: size.height * 0.065,
-                width: double.infinity,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (_) => FaceIdScreen()),
-                    );
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: ColorsManager.blue,
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Create Account",
-                        style: TextStyle(
-                          fontSize: size.width * 0.045,
-                          fontWeight: FontWeight.w600,
-                          color: ColorsManager.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              ButtonWidget(text: "Create Account", onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> FaceIdScreen()));
+              },),
               SizedBox(height: size.height * 0.06),
               DividerWidget(),
               SizedBox(height: size.height * 0.04),

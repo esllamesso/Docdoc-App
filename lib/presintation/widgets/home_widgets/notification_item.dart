@@ -1,7 +1,7 @@
 import 'package:docdoc/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../data/notifications_model.dart';
+import '../../../data/notifications_model.dart';
 
 class NotificationItem extends StatelessWidget {
   final NotificationsModel notification;

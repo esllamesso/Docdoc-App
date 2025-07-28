@@ -1,5 +1,5 @@
 import 'package:docdoc/core/utils/colors.dart';
-import 'package:docdoc/presintation/widgets/home_widgets/rec_doctors_widget.dart';
+import 'package:docdoc/presintation/widgets/doctors_widgets/rec_doctors_widget.dart';
 import 'package:docdoc/presintation/widgets/home_widgets/search_widget.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';

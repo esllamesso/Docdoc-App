@@ -2,6 +2,7 @@ import 'package:docdoc/core/const/images_paths.dart';
 import 'package:docdoc/core/utils/page_transition.dart';
 import 'package:docdoc/core/utils/txt.dart';
 import 'package:docdoc/presintation/screens/registration_screens/sign_in_screen.dart';
+import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -95,34 +96,10 @@ class StartedScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: size.height * 0.03),
-                SizedBox(
-                  width: double.infinity,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                        context,
-                        createFadeSlideRoute(SignInScreen()),
-                      );
-                    },
-                    child: Container(
-                      height: size.height * 0.065,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(16),
-                     ),
-                      child: Center(
-                        child: Text(
-                          "Get Started",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size.width * 0.045,
-                            fontWeight: FontWeight.w600,
-                         ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                
+                ButtonWidget(text: "Get Started",onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> SignInScreen()));
+                },),
              ],
             ),
           ),
