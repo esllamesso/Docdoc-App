@@ -1,7 +1,7 @@
 import 'package:docdoc/presintation/widgets/home_widgets/sort_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../core/utils/colors.dart';
+import '../../core/utils/colors.dart';
 
 class SearchWidget extends StatefulWidget {
   final Function(String)? onSearchChanged;

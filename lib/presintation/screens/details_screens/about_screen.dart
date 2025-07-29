@@ -1,4 +1,5 @@
 import 'package:docdoc/core/utils/colors.dart';
+import 'package:docdoc/presintation/screens/booking_screens/choose_time_screen.dart';
 import 'package:docdoc/presintation/widgets/doctors_widgets/about_tab.dart';
 import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:docdoc/presintation/widgets/doctors_widgets/doctor_header_info.dart';
@@ -62,7 +63,9 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                 ),
                 
-                ButtonWidget(text: "Make An Appointment", onTap: (){},),
+                ButtonWidget(text: "Make An Appointment", onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> ChooseTimeScreen()));
+                },),
 
              
 
