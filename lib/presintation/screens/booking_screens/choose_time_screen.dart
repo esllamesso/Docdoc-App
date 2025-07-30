@@ -7,10 +7,12 @@ import 'package:docdoc/presintation/widgets/booking_widgets/select_date_widget.d
 import 'package:docdoc/presintation/widgets/button_widget.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
+import '../../../data/doctor_model.dart';
 import '../../widgets/booking_widgets/available_time_widget.dart';
 
 class ChooseTimeScreen extends StatefulWidget {
-  const ChooseTimeScreen({super.key});
+  final DoctorModel doctor;
+  const ChooseTimeScreen({super.key, required this.doctor});
 
   @override
   State<ChooseTimeScreen> createState() => _ChooseTimeScreenState();
@@ -116,7 +118,10 @@ class _ChooseTimeScreenState extends State<ChooseTimeScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => PaymentScreen()),
+                    MaterialPageRoute(builder: (_) => PaymentScreen(date: selectedDate,
+                      time: selectedTime,
+                      appointmentType: selectedAppointmentType,
+                    doctor: widget.doctor)),
                   );
                 },
               ),

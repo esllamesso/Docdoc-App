@@ -41,9 +41,9 @@ class _AboutScreenState extends State<AboutScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TopBar(text: "Details"),
+                TopBar(text: widget.doctor.name ,trailing: IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz_outlined)),),
                 SizedBox(height: size.height * 0.03),
-                DoctorHeaderInfo(doctor: doctor),
+                DoctorHeaderInfo(doctor: doctor, showMessageIcon: true,),
                 SizedBox(height: size.height * 0.03),
 
                 TabBarWidget(),
@@ -64,7 +64,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 ),
                 
                 ButtonWidget(text: "Make An Appointment", onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> ChooseTimeScreen()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> ChooseTimeScreen(doctor: doctor)));
                 },),
 
              
