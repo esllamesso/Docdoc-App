@@ -1,3 +1,4 @@
+import 'package:docdoc/presintation/widgets/home_widgets/specialties_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:docdoc/core/utils/colors.dart';
 
@@ -70,40 +71,7 @@ class _SortBottomSheetState extends State<SortBottomSheet> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               SizedBox(height: size.height * 0.04),
-              SizedBox(
-                height: 41,
-                child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: specialties.length,
-                  separatorBuilder: (_, __) => const SizedBox(width: 10),
-                  itemBuilder: (context, index) {
-                    final specialty = specialties[index];
-                    final isSelected = selectedSpecialty == specialty;
-
-                    return ChoiceChip(
-                      label: Text(specialty),
-                      showCheckmark: false,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(24),
-                        side: BorderSide(color: Colors.transparent),
-                      ),
-                      selected: isSelected,
-                      onSelected: (_) {
-                        setState(() {
-                          selectedSpecialty = isSelected ? '' : specialty;
-                        });
-                      },
-                      selectedColor: ColorsManager.blue,
-                      backgroundColor: ColorsManager.grey3,
-                      labelStyle: TextStyle(
-                        color: isSelected
-                            ? ColorsManager.white
-                            : ColorsManager.lightGrey,
-                      ),
-                    );
-                  },
-                ),
-              ),
+              SpecialtiesWidget(),
               SizedBox(height: size.height * 0.05),
 
               const Text(

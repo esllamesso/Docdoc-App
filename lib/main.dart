@@ -1,4 +1,5 @@
 import 'package:docdoc/presintation/screens/home_screens/home_screen.dart';
+import 'package:docdoc/presintation/screens/home_screens/search_screen.dart';
 import 'package:docdoc/presintation/screens/profile_screens/profile_screen.dart';
 import 'package:docdoc/presintation/screens/registration_screens/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (_) => HomeScreen(),
         '/profile': (_) => ProfileScreen(),
+        '/search': (_) => SearchScreen(),
       },
 
       debugShowCheckedModeBanner: false,

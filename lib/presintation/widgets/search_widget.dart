@@ -5,6 +5,7 @@ import '../../core/utils/colors.dart';
 
 class SearchWidget extends StatefulWidget {
   final Function(String)? onSearchChanged;
+
   const SearchWidget({super.key, this.onSearchChanged});
 
   @override
@@ -38,20 +39,24 @@ class _SearchWidgetState extends State<SearchWidget> {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
-                 SvgPicture.asset("assets/icons/search.svg"),
+                SvgPicture.asset("assets/icons/search.svg"),
                 SizedBox(width: size.width * 0.02),
                 Expanded(
                   child: TextField(
                     controller: _controller,
                     cursorColor: ColorsManager.grey,
-                    onChanged: widget.onSearchChanged,
-                    decoration:  InputDecoration(
+                    onChanged: (value) {
+                      if (widget.onSearchChanged != null) {
+                        widget.onSearchChanged!(value);
+                      }
+                    },
+                    decoration: InputDecoration(
                       hintText: "Search",
                       hintStyle: TextStyle(color: ColorsManager.lightGrey),
                       border: InputBorder.none,
                       isDense: true,
                     ),
-                    style:  TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 16),
                   ),
                 ),
               ],
@@ -67,7 +72,7 @@ class _SearchWidgetState extends State<SearchWidget> {
               builder: (_) => const SortBottomSheet(),
             );
           },
-          icon:  SvgPicture.asset("assets/icons/sort.svg"),
+          icon: SvgPicture.asset("assets/icons/sort.svg"),
         ),
       ],
     );
