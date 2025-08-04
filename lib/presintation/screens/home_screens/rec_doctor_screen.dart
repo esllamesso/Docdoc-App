@@ -5,6 +5,8 @@ import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
 class RecDoctorScreen extends StatefulWidget {
+
+
   const RecDoctorScreen({super.key});
 
   @override
@@ -12,6 +14,8 @@ class RecDoctorScreen extends StatefulWidget {
 }
 
 class _RecDoctorScreenState extends State<RecDoctorScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
