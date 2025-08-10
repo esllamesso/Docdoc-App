@@ -1,5 +1,6 @@
 import 'package:docdoc/presintation/screens/registration_screens/face_id_screen.dart';
 import 'package:docdoc/presintation/widgets/button_widget.dart';
+import 'package:docdoc/presintation/widgets/registration_widgets/have_acc_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/colors.dart';
 import '../../../core/utils/txt.dart';
@@ -95,35 +96,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: size.height * 0.04),
               TextSpanWidget(),
               SizedBox(height: size.height * 0.03),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account yet?",
-                    style: TextStyle(
-                      fontSize: size.width * 0.028,
-                      fontWeight: FontWeight.w400,
-                      color: ColorsManager.black,
-                    ),
-                  ),
-                  SizedBox(width: size.width * 0.01),
-                  InkWell(
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      "Sign In",
-                      style: TextStyle(
-                        fontSize: size.width * 0.028,
-                        fontWeight: FontWeight.w500,
-                        color: ColorsManager.blue,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              HaveAccWidget(),
             ],
           ),
         ),

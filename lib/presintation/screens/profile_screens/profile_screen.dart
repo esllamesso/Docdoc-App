@@ -7,6 +7,8 @@ import 'package:docdoc/presintation/widgets/custom_bottom_nav_bar.dart';
 import 'package:docdoc/presintation/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../settings_screens/settings_screen.dart';
+
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
@@ -36,7 +38,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             child: Column(
               children: [
-                TopBar(text: "Profile", color: ColorsManager.white),
+                TopBar(
+                  text: "Profile",
+                  color: ColorsManager.white,
+                  trailing: IconButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=> SettingsScreen()));
+                    },
+                    icon: Icon(Icons.settings, color: ColorsManager.white,),
+                  ),
+                ),
                 SizedBox(height: height * 0.15),
               ],
             ),
