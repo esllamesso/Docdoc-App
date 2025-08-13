@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:docdoc/logic/sign_up/states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../core/api/url.dart';
+
 class SignUpCubit extends Cubit<SignUpStates> {
   SignUpCubit() : super(SignUpInitialState());
 
@@ -10,18 +12,22 @@ class SignUpCubit extends Cubit<SignUpStates> {
   Future signUp({
     required String email,
     required String password,
+    required String password_confirmation,
     required String name,
-    required String phoneNumber,
+    required String phone,
     required String gender,
   }) async {
     emit(SignUpLoadingState());
 
     try {
-      dio.post("lll", data: {
+     await dio.post(
+         Url.registerUrl,
+         data: {
         "email": email,
         "password": password,
+        "password_confirmation": password_confirmation,
         "name": name,
-        "phone_number": phoneNumber,
+        "phone": phone,
         "gender": gender,
       });
       emit(SignUpSuccessState());

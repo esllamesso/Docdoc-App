@@ -29,7 +29,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
     return TextFormField(
       obscureText: widget.obscureText ?? false,
       cursorColor: ColorsManager.lightGrey,
-      style: TextStyle(color: ColorsManager.white),
+      style: TextStyle(color: ColorsManager.black),
       controller: widget.controller,
       keyboardType: widget.keyType,
       decoration: InputDecoration(
