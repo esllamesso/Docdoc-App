@@ -35,7 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           size.width * 0.08,
           size.height * 0.08,
           size.width * 0.08,
-          0,
+          size.height * 0.02,
         ),
         child: SingleChildScrollView(
           child: Column(
