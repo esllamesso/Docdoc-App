@@ -22,6 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool _isObscure = true;
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +66,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               SizedBox(height: size.height * 0.02),
               TextFormFieldWidget(
+                hintText: "Name",
+                controller: nameController,
+                keyType: TextInputType.name,
+              ),
+              SizedBox(height: size.height * 0.02),
+              TextFormFieldWidget(
                 hintText: "Password",
+                obscureText: _isObscure,
+                controller: passController,
+                keyType: TextInputType.visiblePassword,
+                suffIcon: IconButton(
+                  icon: Icon(
+                    _isObscure ? Icons.visibility_off : Icons.visibility,
+                    color: ColorsManager.lightGrey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isObscure = !_isObscure;
+                    });
+                  },
+                ),
+              ),
+              SizedBox(height: size.height * 0.02),
+              TextFormFieldWidget(
+                hintText: "Confirm Password",
                 obscureText: _isObscure,
                 controller: passController,
                 keyType: TextInputType.visiblePassword,

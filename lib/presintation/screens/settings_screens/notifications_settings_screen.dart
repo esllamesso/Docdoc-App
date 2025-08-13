@@ -60,11 +60,10 @@ class _NotificationsSettingsScreenState extends State<NotificationsSettingsScree
                       ),
                     ),
                     trailing: CustomSwitch(value: item["value"],
-
-                      onChanged: (bool newValue) {
+                        onChanged: (bool newValue) {
                         setState(() {
                           item["value"] = newValue;
-                        });
+                        },);
                       },
                   ),
                         );
